@@ -5,10 +5,20 @@ async function getCocktails() {
 }
 
 export default async function Cocktails() {
+    const cocktails = await getCocktails();
 
     return (
         <div>
-            <h1>Cocktails</h1>
+            {cocktails.map((cocktail) => {
+                return (
+                    <div key={cocktail.idDrink}>
+                        <h3>{cocktail.strDrink}</h3>
+                        <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+                    </div>
+                )
+            })
+            }
+            )
         </div>
     );
 }
