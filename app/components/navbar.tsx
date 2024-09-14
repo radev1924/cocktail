@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className="bg-blue-500 dark:bg-blue-800 p-4">
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center text-white text-2xl font-bold transform transition duration-200 hover:scale-105">
-          <span>CocktailDB</span>
+          <span>Daniel&apos;s Cocktail</span>
         </Link>
         <button
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
