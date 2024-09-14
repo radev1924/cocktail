@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'next/navigation';
-import Image from 'next/image';
 
 interface Cocktail {
   idDrink: string;
