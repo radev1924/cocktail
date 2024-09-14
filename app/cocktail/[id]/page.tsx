@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'next/navigation';
+import Image from 'next/image';
 
 interface Cocktail {
   idDrink: string;
@@ -53,7 +54,7 @@ export default function CocktailDetails() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">{cocktail.strDrink}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} className="w-full rounded-lg shadow-md" />
+        <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} width={300} height={300} className="w-full rounded-lg shadow-md" />
         <div>
           <div className="mb-6">
             <h2 className="text-2xl font-semibold mb-2">Details</h2>
