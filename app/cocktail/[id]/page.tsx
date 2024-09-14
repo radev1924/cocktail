@@ -9,6 +9,8 @@ interface Cocktail {
   strDrink: string;
   strDrinkThumb: string;
   strInstructions: string;
+  strCategory: string;
+  strGlass: string;
   [key: string]: string | null;
 }
 
@@ -53,6 +55,11 @@ export default function CocktailDetails() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} className="w-full rounded-lg shadow-md" />
         <div>
+          <div className="mb-6">
+            <h2 className="text-2xl font-semibold mb-2">Details</h2>
+            <p><strong>Category:</strong> {cocktail.strCategory}</p>
+            <p><strong>Glass:</strong> {cocktail.strGlass}</p>
+          </div>
           <h2 className="text-2xl font-semibold mb-4">Ingredients</h2>
           <ul className="list-disc list-inside mb-6">
             {ingredients.map((ingredient, index) => (
