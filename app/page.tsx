@@ -36,13 +36,13 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4">
       <h1 className="text-3xl font-bold my-8">Ordinary Drink Cocktails</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {cocktails.map((cocktail) => (
-          <Link href={`/cocktail/${cocktail.idDrink}`} key={cocktail.idDrink}>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+          <Link href={`/cocktail/${cocktail.idDrink}`} key={cocktail.idDrink} className="transform transition duration-200 hover:scale-105">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
               <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} className="w-full h-48 object-cover" />
               <div className="p-4">
-                <h2 className="text-xl font-semibold text-center text-black">{cocktail.strDrink}</h2>
+                <h2 className="text-xl font-semibold text-gray-800 dark:text-white">{cocktail.strDrink}</h2>
               </div>
             </div>
           </Link>
