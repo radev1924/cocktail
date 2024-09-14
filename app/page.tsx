@@ -42,7 +42,7 @@ export default function Home() {
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
               <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} className="w-full h-48 object-cover" />
               <div className="p-4">
-                <h2 className="text-xl font-semibold text-gray-800 dark:text-white">{cocktail.strDrink}</h2>
+                <h2 className="text-xl font-semibold text-gray-800 dark:text-white text-center">{cocktail.strDrink}</h2>
               </div>
             </div>
           </Link>
